@@ -22,10 +22,11 @@ class CustomReactNavigationNavigator extends React.Component {
 
   render() {
     const { timesTabbed } = this.state
+    const { navigation } = this.props
 
     return (
       <MainTabNavigator
-        navigation={this.props.navigation}
+        navigation={navigation}
         screenProps={{
           tabCounter: timesTabbed,
           onDidTab: this.incrementTimesTabbed,
