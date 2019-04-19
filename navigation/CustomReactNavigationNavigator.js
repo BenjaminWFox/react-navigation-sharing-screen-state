@@ -1,7 +1,7 @@
 import React from 'react'
-import MainTabNavigator from './MainTabNavigator'
+import { MainTabNavigator } from './BasicReactNavigationSetup'
 
-class TabsScreensExposedCustomRouter extends React.Component {
+class CustomReactNavigationNavigator extends React.Component {
   static router = MainTabNavigator.router
 
   state = {
@@ -24,12 +24,15 @@ class TabsScreensExposedCustomRouter extends React.Component {
     const { timesTabbed } = this.state
 
     return (
-      <MainTabNavigator screenProps={{
-        tabCounter: timesTabbed,
-        onDidTab: this.incrementTimesTabbed,
-      }} />
+      <MainTabNavigator
+        navigation={this.props.navigation}
+        screenProps={{
+          tabCounter: timesTabbed,
+          onDidTab: this.incrementTimesTabbed,
+        }}
+      />
     )
   }
 }
 
-export default TabsScreensExposedCustomRouter
+export default CustomReactNavigationNavigator

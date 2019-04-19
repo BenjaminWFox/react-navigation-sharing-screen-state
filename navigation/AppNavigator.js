@@ -1,5 +1,5 @@
 import { createAppContainer } from 'react-navigation';
 
-import TabsScreensExposedCustomRouter from './TabScreensExposedCustomRouter';
+import CustomReactNavigationNavigator from './CustomReactNavigationNavigator';
 
-export default createAppContainer(TabsScreensExposedCustomRouter);
+export default createAppContainer(CustomReactNavigationNavigator);

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
 export default class BaseScreen extends React.Component {
   render() {
-    const { tabCounter, onDidTab } = this.props.screenProps
+    const { tabCounter, onDidTab } = this.props.screenProps || { tabCounter: null, onDidTab: () => null }
     const { screenName } = this.props
 
     return (
