@@ -1,29 +1,10 @@
-import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import React from 'react'
+import BaseScreen from './BaseScreen'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#fff',
-  },
-});
-
-export default class LinksScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Links',
-  };
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Hi from the Links Screen</Text>
-      </View>
-    );
-  }
+const HomeScreen = ({...props}) => {
+  return (
+    <BaseScreen screenName="Link" {...props} />
+  )
 }
+
+export default HomeScreen
