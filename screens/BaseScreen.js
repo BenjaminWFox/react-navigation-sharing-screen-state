@@ -12,10 +12,6 @@ const styles = StyleSheet.create({
 });
 
 export default class BaseScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
-  };
-
   render() {
     const { tabCounter, onDidTab } = this.props.screenProps
     const { screenName } = this.props

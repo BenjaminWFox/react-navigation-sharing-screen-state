@@ -1,10 +1,16 @@
 import React from 'react'
 import BaseScreen from './BaseScreen'
 
-const HomeScreen = ({...props}) => {
-  return (
-    <BaseScreen screenName="Link" {...props} />
-  )
+class LinkScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Links',
+  };
+
+  render() {
+    return (
+      <BaseScreen screenName="Link" {...this.props} />
+    )
+  }
 }
 
-export default HomeScreen
+export default LinkScreen
